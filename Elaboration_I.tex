@@ -18,26 +18,18 @@
 \textit{Elaboration addresses major risks, builds on an early skeleton architecture of the system, and redefines and evilest the project plans (Kroll and Kruchten, 2003)}.
 \end{center}
 
-Using Kroll and Kruchten’s (2003) Elaboration Phase as a framework, I will identify technologies and other components of modern data collection that could accomplish each step of my POC. In addition, I will also address problems that may arise and will provide alternative solutions. The Elaboration Plan will divided into four stages:
+Using Kroll and Kruchten’s (2003) Elaboration Phase as a framework, I will identify technologies and other components of modern data collection that could accomplish each step of my POC. In addition, I will also address problems that may arise and will provide alternative solutions. The Elaboration Plan will divided into three stages:
 \begin{enumerate}
     \item A detailed understanding of the requirements
     \item Architecture design 
     \item Risks and solutions
-    \subitem Architectural mechanisms: common solutions to common problems 
-    \item Refined POC
 \end{enumerate}
 
 \section{Requirements}
-During the Scoping exercise, I focused my attention on developing a tool to manage multiple sources of data collected during field work. That is, the tool would identify particular themes and reoccurring patterns within data that has been rendered in one format. For instance, Anthropologists use a variety of methodologies to collect data - such as online sources, audio recordings, interviews, questionnaires, focus groups and participant observation. Following data collection, key words and meaningful chunks of information are extracted from the data - this is called coding. Codes provide both inspiration and verification as through discover significant categories and relationships within dense and saturated data. 
+During the Scoping exercise, I focused on developing a tool to manage multiple sources of data collected during field work. That is, the tool would identify particular themes and reoccurring patterns within data that has been rendered in one format. For instance, Anthropologists use a variety of methodologies to collect data - such as online sources, audio recordings, interviews, questionnaires, focus groups and participant observation. Following data collection, key words and meaningful chunks of information are extracted from the data - this is called coding. Codes provide both inspiration and verification as they discover significant categories and relationships within dense and saturated data. 
 
 \subsection{Open Coding}
-Open coding is the initial analysis phase. It involves identifying codes without any restrictions or purpose other than to discover chunks of meaning. Open coding requires researcher's to be open in order to make unexpected discoveries and to refrain from closure even after codes have been identified. 
-
-As open coding is concerned with labelling and categorising phenomena, the constant comparative method may be used to continuously compare each piece of data with codes already identified. This helps identity distinct characteristics and ordinal positions of relevant scales. When theoretical saturation is achieved - When no further codes or categories can be identified - a process called sorting or ordering data taking place. This involves identifying contrasts and relationships between codes, such as indicating particular outliers and the frequency of codes. 
-
-
-\subsection{Categories}
-A critical part of coding is the identification and naming of categories, such as "greeting people". Codes that lead to the discovery of a 'greeting' category might come from the observation of encounters with other people in which particular rituals and significance is identified. Categories can include sub-categories, such as 'shaking hands'. Naming categories is important as this provides the researcher with the ability to discuss findings.
+Open coding is the initial analysis phase. It involves identifying codes without any restrictions or purpose other than to discover chunks of meaning. Open coding requires researcher's to be open in order to make unexpected discoveries and to refrain from closure even after codes have been identified. As open coding is concerned with labelling and categorising phenomena, the constant comparative method may be used to continuously compare each piece of data with codes already identified. This helps identity distinct characteristics and ordinal positions of relevant scales. When theoretical saturation is achieved - When no further codes or categories can be identified - a process called sorting or ordering data taking place. This involves identifying contrasts and relationships between codes, such as indicating particular outliers and the frequency of codes. 
 
 \subsection{Axial Coding}
 Axial coding refers to discovering codes around a single category in order to discover links and relationships. For example, in a category of 'greeting' there may be a search for encounters with other people, talk about previous encounters and emotional impacts from meeting others. Axial coding looks for:
@@ -54,7 +46,7 @@ Axial coding may be done at any time, even prior to identifying firm categories.
 Selective coding focuses on core categories in order to identify specific links and how these links may or may not lie at the heart of the matter. This helps with organising and integrating categories. 
 
 \section{Architecture}
-Identifying codes and categories is a long and exhaustive process of repeated word-by-word analysis. The problem here is that more data leads to better categories, theories and conclusions, however more data also requires more effort and time. Therefore, this technology deployment will involve using r to perform analyses like free-list and pile sort. As such, the architecture design can be broken into two main components:
+Identifying codes and categories is a long and exhaustive process of repeated word-by-word analysis. The problem here is that more data leads to better categories, theories and conclusions, however more data also requires more effort and time. Therefore, this technology deployment will involve using R to perform analyses like free-list and pile sort. As such, the architecture design can be broken into two main components:
 \begin{enumerate}
 \item CAQDAS: ATLAS.ti, NVivo and RQDA -  this will identify types and levels of meaningful phenomena.
 \item Cultural Domain Analysis: ANTHROPAC and AnthroTools -  this will be used to gain insight into the importance and association between codes and categories.
@@ -95,7 +87,7 @@ RQDA is open-source software (OSS). Unlike ATLAS.ti and NVivo, RQDA users have o
 
 \begin{tabu} to 1.0\textwidth { | X[l] | X[l] | X[l]| X[l]|}
  \hline
- Aspect of comparison & RQDA & ATLAS.ti & NVivo \\
+ \textbf{Aspect of comparison} & \textbf{RQDA} & \textbf{ATLAS.ti} & \textbf{NVivo} \\
  \hline
  License  & Open source  & proprietary & proprietary  \\
 \hline
@@ -127,12 +119,46 @@ If RQDA fails to do what my analysis requires, I will use NVivo. This is purely 
 \begin{center}
 \textbf{Cultural Domain Analysis}
 \end{center}
-If RQDA and NVivo cannot provide appropriate anthropological analyses such as open coding and axial coding, then techniques for cultural domain analysis may be used. Cultural domain analysis describes contents, structure, and distribution of knowledge in organised spheres of experience. 
+If RQDA and NVivo cannot provide appropriate anthropological analyses such as open coding and axial coding, then techniques for cultural domain analysis may be used. Cultural domain analysis describes contents, structure, and distribution of knowledge in organised spheres of experience.
 
 \subsubsection{ANTHROPAC} 
 ANTHROPAC is a software program from analysing data on cultural domains. It helps collect and analyse structured qualitative data including free-lists, pile-sorts, triads, paired comparisons, and ratings. Furthermore, ANTHROPAC provides a variety of data manipulation tools, has a User's guide, and methods guide. However, ANTHROPAC requires data to be organised in a particular .txt file format. This method may become laborious if working with large amounts of data. 
 
 \subsubsection{AnthroTools}
 AnthroTools allows researchers to quickly analyse free-list data and convert it into various datasets that are more immediately useable. Moreover, AnthroTools uses the open-source program R that will be used for CAQDAS. The free-list analysis tool will allow me to calculate the salience of specific concepts that arise during interviews. If successful, this tool would allow me to assess the structure of the participants thoughts and the way they conceptualise particular concepts. However, this tool requires participants to list objects in a given domain. As interviews are semi-structured, this process may be hard.
+
+\section{Risks and Solutions}
+The risks and appropriate solutions are as follows:
+
+\subsection{Legal and financial issues}
+This issues related to the usage of open source or commercial components. In order to mitigate financial strain only open source software will be used (Eg. RQDA).
+
+\subsection{Solving the easy stuff first}
+In order to avoid hasty solutions and decision making, I will tackle the hard issues first. This will be done through continuously updating my risk list in order to guide my focus towards the biggest risks. first. 
+
+\subsection{Falling behind schedule}
+In order to prevent the project from falling behind schedule it is important to have each phase uploaded to CloudStor on time.
+
+\subsection{Ending elaboration before the architecture is stable}
+This will cause excessive re-work and lower quality of work. Make sure that each component is tested and produces the desired results.
+
+\section{Revision of POC}
+After doing further research into the tools available, the processes involved, and the considering the time limits I have decided to focus on using R to develop a script for analysing and coding qualitative data - using methods such as free-list analysis and pile sorting. This will involve the following steps:
+\begin{enumerate}
+    \item Convert necessary data into .txt format
+    \item Import the files on R 
+    \item Run the RQDA package on R 
+    \item Run a word frequency analysis
+    \item Use the frequency output to conduct open coding
+    \item Use pile sort method to examine interactions and relationships between codes and categories (axial coding)
+    \item Produce a coding table to get a descriptive look at the data.
+    \item Export as HTML
+\end{enumerate}
+If RQDA doesn't produce appropriate coding analysis:
+\begin{enumerate}
+    \item Add AnthroTools package to R \item Run a free-list analysis
+    \item Run a salience calculation 
+    \item Export in spreedsheet format
+\end{enumerate}
 
 \end{document}
