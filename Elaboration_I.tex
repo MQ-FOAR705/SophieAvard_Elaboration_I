@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{tabu}
+\usepackage{graphicx}
 
 \title{Elaboration I}
 \author{Sophie Avard }
@@ -158,7 +159,49 @@ If RQDA doesn't produce appropriate coding analysis:
 \begin{enumerate}
     \item Add AnthroTools package to R \item Run a free-list analysis
     \item Run a salience calculation 
-    \item Export in spreedsheet format
+    \item Export in spreadsheet format
 \end{enumerate}
+
+\section{Elaboration Part II}
+This phase involves implementing and evaluating the architecture previously listed. Firstly, I will test the tools to make sure they perform what is expected of them. If they do not do what I need them to do, I will try an alternative tool. This will continue until I find a tool that is able to perform the coding and analysis that is needed. After this, I will Revise my POC in light of the implementation results. 
+
+\subsection{RQDA}
+Steps completed:
+\begin{enumerate}
+    \item Covert transcript into .txt format by online text converter 
+    % https://document.online-convert.com/convert-to-txt
+    \item add the .txt file to my working directory
+    \item Download R 
+    \item Download R Studio - this makes it easier and more efficient 
+    \item Follow to installation steps for RQDA (see learning journal)
+\end{enumerate}
+
+Unfortunately I could not run the analysis that I wanted to run as I kept getting and error message in R that would not allow me to use the RQDA package. For this reason I will seek an alternate tool, however, I may still use RQDA if I can fix the error. 
+
+\subsection{AnthroTools}
+AnthroTools package to R:\\
+\verb|install.packages("devtools")|\\
+\verb|library("devtools")|\\
+\verb|install_github('alastair-JL/AnthroTools')|\\
+\verb|library(AnthroTools)|\\
+
+\includegraphics[width=\textwidth]{AnthroTools.png}
+
+After installing to AnthroTools package I got another error message in R (see below image). It is clear that something is wrong on my end as I have been able to use AnthroTools previously. 
+
+As such, I will test another alternative in case this cannot be fixed. 
+
+\subsection{Voyant}
+I implemented Voyant to see what type of textual analysis it would produce. I did this by uploading an essay that I have been working up for my thesis.
+
+One of the requirements is a word frequency analysis. The results on Voyant successfully showed the frequency of terms used throughout the essay.
+
+\includegraphics[width=\textwidth]{Voyant.png}
+
+Another requirement of the analysis is discovering relationships between words/codes. Unfortunately Voyant did not provide this analysis.
+
+While I think I will find a better tool, Voyant would still be useful for identifying the frequency of words within transcripts which then could be used for thematic coding. 
+
+
 
 \end{document}
